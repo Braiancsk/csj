@@ -3,7 +3,7 @@ import React from 'react';
 export default function Card(props) {
   return (
       <div className="p-[40px] card max-w-[575px] w-full">
-          <div className="flex flex-wrap justify-center md:justify-between">
+          <div className="flex flex-wrap justify-center md:justify-between gap-3">
               <div className="md:w-[50%]">
               <h4 className="uppercase text-xl md:text-3xl mb-[51px] text-white text-center">{props.title}</h4>
               <h4 className="uppercase text-xl md:text-3xl mb-[18px] text-center text-white">id number</h4>

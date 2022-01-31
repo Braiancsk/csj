@@ -20,7 +20,7 @@ export default function Cards() {
   useEffect(()=>{
     async function fechData(){
         try{
-            const response = await axios.get('https://mocki.io/v1/8bf1fb5d-3ee2-44fa-98d7-652ffbba8322')
+            const response = await axios.get('https://mocki.io/v1/61ce2d44-c8ec-4070-af31-92cfbe67b4db')
             console.log(response.data.ships)
             setData(response.data.ships)
       
