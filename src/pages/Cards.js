@@ -15,8 +15,6 @@ export default function Cards() {
   //set data
   const [data, setData] = useState([])
 
-  const [fuelAvailable, setFuelAvailable] = useState([])
-
   useEffect(()=>{
     async function fechData(){
         try{

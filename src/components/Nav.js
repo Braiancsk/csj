@@ -45,6 +45,7 @@ export default function Nav() {
                 <li className="list-none"><a onClick={handleCloseMenu} href="#tokenomics" className="no-underline text-white text-2xl">Tokenomics</a></li>
                 <li className="list-none"><a onClick={handleCloseMenu} href="#team" className="no-underline text-white text-2xl">Team</a></li>
                 <li className="list-none"><a onClick={handleCloseMenu} href="#partners" className="no-underline text-white text-2xl">Partners</a></li>
+                <li className="list-none"><a href="#" className="no-underline text-white text-2xl">Whitepapper</a></li>
             </ul>
           </div>
 
@@ -61,6 +62,7 @@ export default function Nav() {
                 <li className="list-none"><a href="#tokenomics" className="no-underline text-white">Tokenomics</a></li>
                 <li className="list-none"><a href="#team" className="no-underline text-white">Team</a></li>
                 <li className="list-none"><a href="#partners" className="no-underline text-white">Partners</a></li>
+                <li className="list-none"><a href="#" className="no-underline text-white">Whitepapper</a></li>
             </ul>
 
             <div className="md:hidden mt-3">

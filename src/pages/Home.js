@@ -22,12 +22,13 @@ import partner from '../assets/partner.png'
 //icones
 import { IoMdArrowDropup } from 'react-icons/io';
 import Partner from '../components/Partner';
+import { Link } from 'react-router-dom';
 
 export default function Home() {
   return (
       <div>
-        <div className="bg-hero-pattern bg-black bg-cover bg-no-repeat flex flex-col items-center justify-center">
-          <button className="p-[49px] block max-w-[327px] w-full border-0 bg-[#2B6688] text-white text-center rounded-[20px] shadow-btn text-3xl uppercase mt-[165px]">Whitelist</button>
+        <div className="bg-hero-pattern bg-black bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center">
+          <Link to="/cards" className="p-[49px] block max-w-[327px] w-full border-0 bg-[#2B6688] text-white text-center rounded-[20px] shadow-btn text-3xl uppercase mt-[165px]">Whitelist</Link>
         
             <a href="#" className="text-[#00C2FF] mt-3">Subscribe to our newsletter</a>
 
@@ -35,11 +36,18 @@ export default function Home() {
             <img src={arrow} alt="seta apontando para baixo" className="mt-7 pb-[122px]"/>
         </div>
 
+   
+        <div className="bg-[#003452] py-[41px] text-center">
+            <h2 className="uppercase text-[#00C2FF] text-3xl text-shadow break-words">Contract: <br/>0x9c9fA5994Bf0B83b0ad6E6Eb393CeB0662DcAFac</h2>
+        </div>
+     
+       
+
         <div id="ships" className="bg-[#003452] py-[41px] text-center">
             <h2 className="uppercase text-[#00C2FF] text-3xl text-shadow">Ships</h2>
         </div>
 
-        <div className="bg-ships py-[60px] darker">
+        <div className="bg-ships py-[60px] darker px-5">
             <Slide/>
         </div>
 

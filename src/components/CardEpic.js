@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 
 import trophy from '../assets/trophy.png'
 import Fuel from './Fuel';
@@ -10,9 +10,6 @@ export default function CardEpic(props) {
 
   const [isPending,setIsPending] = useState(false)
   const [wear,setWear] = useState(40)
-
-  //setFuel
-  const [fuel,setFuel] = useState([true,true,true,true,'extra','extra','extra'])
 
   function handleWear() {
     setWear(prevWear => prevWear - 10)
@@ -46,12 +43,7 @@ export default function CardEpic(props) {
     toast.success('Your wear was successfully restored')
   }
 
-  const renderFuel = fuel.map((val,index) => {
-    return <Fuel
-    key={index}
-    className={'' + (val ? 'fuel ' : 'no_fuel ') + (val === 'extra' ? 'extra_fuel' : '')} 
-    />
-})
+
   return (
       <div className="cards p-2 max-w-[348px] w-full">
           {isPending && <Loading/>}
@@ -65,32 +57,32 @@ export default function CardEpic(props) {
           <div className="px-2">
 
           <div className="flex justify-between items-center my-3">
-              <div>
+              <div className="max-w-[50%] w-full">
                   <h6 className="text-white text-[16px]">Rarity: {props.rarity}</h6>
               </div>
 
-              <div>
-                  <h6 className="text-white text-[16px]">ID: #{props.id}</h6>
+              <div className="max-w-[50%] w-full">
+                  <h6 className="text-white text-[16px] text-center">ID: #{props.id}</h6>
               </div>
           </div>
 
           <div className="flex justify-between items-center my-3">
-              <div>
+              <div className="max-w-[50%] w-full">
                   <h6 className="text-white text-[16px] ">Power: <b className="cards__info ml-1">{props.power}</b></h6>
               </div>
 
-              <div>
-                  <h6 className="text-white text-[16px]">Experience: <b className="cards__info ml-1">{props.experience}/100</b></h6>
+              <div className="max-w-[50%] w-full">
+                  <h6 className="text-white text-[16px] text-center">Experience: <b className="cards__info ml-1">{props.experience}/100</b></h6>
               </div>
           </div>
 
           <div className="flex justify-between items-center my-3">
-              <div>
+              <div className="max-w-[50%] w-full">
                   <h6 className="text-white text-[16px]">Speed: <b className="cards__info ml-1">{props.speed}</b></h6>
               </div>
 
-              <div>
-                  <h6 className="text-white text-[16px]">Level: <b className="cards__info ml-1">{props.level}</b></h6>
+              <div className="max-w-[50%] w-full">
+                  <h6 className="text-white text-[16px] text-center relative left-[-15px]">Level: <b className="cards__info ml-1">{props.level}</b></h6>
               </div>
           </div>
 
